@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_height">72dp</dimen>
+    <dimen name="corner_radius">36dp</dimen>
+    <dimen name="text_size">32sp</dimen>
+    <dimen name="layout_margin">12dp</dimen>
+    <dimen name="padding_start">20dp</dimen>
+    <dimen name="padding_end">20dp</dimen>
+    <dimen name="button_layout_W">412dp</dimen>
+    <dimen name="result_View_W">406dp</dimen>
+    <dimen name="result_View_H">113dp</dimen>
+    <dimen name="button_W">0dp</dimen>
+    <dimen name="equals_W">118dp</dimen>
+
+</resources>

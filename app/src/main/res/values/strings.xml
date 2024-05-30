@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment_COMP3025</string>
+    <string name="plus_minus">+-</string>
+    <string name="minus">\-</string>
+    <string name="plus">\u002b</string>
+    <string name="divide">\ /</string>
+    <string name="multiply">\X </string>
+    <string name="percentage">\u0025</string>
+    <string name="delete">\Reset</string>
+    <string name="equals">\u003d</string>
+    <string name="backspace">\C</string>
+</resources>

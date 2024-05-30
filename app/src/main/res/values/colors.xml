@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_lavender">#564469</color>
+    <color name="operators_colour">#A085BC</color>
+    <color name="light_blue">#A9EFF1</color>
+    <color name="equals_colour">#AE72A0</color>
+    <color name="delete_colour">#E9E0F3</color>
+    <color name="purple">#2B2433</color>
+</resources>
