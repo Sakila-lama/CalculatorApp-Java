@@ -75,7 +75,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="plus_minus"/>
+                android:tag="+/-"/>
 
 
             <Button
@@ -89,7 +89,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="percentage"/>
+                android:tag="%"/>
 
             <Button
                 android:id="@+id/multiply"
@@ -102,7 +102,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="multiply"/>
+                android:tag="*"/>
 
             <Button
                 android:id="@+id/backspace"
@@ -115,7 +115,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="backspace"/>
+                android:tag="C"/>
         </LinearLayout>
 
         <LinearLayout
@@ -135,7 +135,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="one"/>
+                android:tag="1"/>
 
             <Button
                 android:id="@+id/two_button"
@@ -148,7 +148,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="two"/>
+                android:tag="2"/>
 
             <Button
                 android:id="@+id/three_button"
@@ -161,7 +161,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="three"/>
+                android:tag="3"/>
 
             <Button
                 android:id="@+id/minus"
@@ -174,7 +174,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="minus"/>
+                android:tag="-"/>
         </LinearLayout>
 
         <LinearLayout
@@ -194,7 +194,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="four"/>
+                android:tag="4"/>
 
             <Button
                 android:id="@+id/five_button"
@@ -207,7 +207,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="five"/>
+                android:tag="5"/>
 
             <Button
                 android:id="@+id/six_button"
@@ -220,7 +220,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="six"/>
+                android:tag="6"/>
 
             <Button
                 android:id="@+id/plus"
@@ -233,7 +233,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="plus"/>
+                android:tag="+"/>
         </LinearLayout>
 
         <LinearLayout
@@ -253,7 +253,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="seven"/>
+                android:tag="7"/>
 
             <Button
                 android:id="@+id/eight_button"
@@ -266,7 +266,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="eight"/>
+                android:tag="8"/>
 
             <Button
                 android:id="@+id/nine_button"
@@ -279,7 +279,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="nine"/>
+                android:tag="9"/>
 
             <Button
                 android:id="@+id/divide"
@@ -292,7 +292,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="divide"/>
+                android:tag="/"/>
         </LinearLayout>
 
         <LinearLayout
@@ -312,7 +312,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="zero"/>
+                android:tag="0"/>
 
             <Button
                 android:id="@+id/decimal_button"
@@ -325,7 +325,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="decimal"/>
+                android:tag="."/>
 
             <Button
                 android:id="@+id/equals_button"
@@ -338,7 +338,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 app:cornerRadius="@dimen/corner_radius"
-                android:tag="equals"/>
+                android:tag="="/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
