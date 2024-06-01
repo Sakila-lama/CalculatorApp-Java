@@ -12,6 +12,22 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
+    /***
+     * File name: Assignment_COMP3025
+     * Author's name: Sakila lama
+     * Student ID: 200548805
+     * Date: June 1, 2024
+     *  App Description:
+     * This is a simple calculator application designed for Android devices.
+     * It provides basic arithmetic operations including addition, subtraction,
+     * multiplication, division, and percentage calculations. The app also
+     * supports edge-to-edge display.
+     *
+     * Version Information:
+     * Version: 1.0
+     * Last Updated: June 1, 2024
+
+     ****/
 
     private lateinit var resultTextView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
