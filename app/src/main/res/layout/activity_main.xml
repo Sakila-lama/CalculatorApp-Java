@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/result_View"
+        android:id="@+id/resultTextView"
         android:layout_width="@dimen/result_View_W"
         android:layout_height="@dimen/result_View_H"
         android:layout_margin="@dimen/layout_margin"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_View">
+        app:layout_constraintTop_toBottomOf="@id/resultTextView">
 
         <LinearLayout
             android:id="@+id/Linear_layout1"
@@ -334,11 +334,11 @@
                 android:layout_margin="@dimen/layout_margin"
                 android:layout_weight="1"
                 android:backgroundTint="@color/delete_colour"
+                android:tag="="
                 android:text="@string/equals"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
-                app:cornerRadius="@dimen/corner_radius"
-                android:tag="="/>
+                app:cornerRadius="@dimen/corner_radius" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
