@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "ca.georgiancollege.assignment_comp3025"
+    namespace = "ca.georgiancollege.assignment2"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ca.georgiancollege.assignment_comp3025"
+        applicationId = "ca.georgiancollege.assignment2"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -26,6 +26,11 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

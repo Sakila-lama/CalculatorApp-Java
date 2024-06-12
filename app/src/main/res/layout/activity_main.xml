@@ -46,16 +46,16 @@
 
             <Button
                 android:id="@+id/delete"
-                android:layout_width="@dimen/button_W"
+                android:layout_width="392dp"
                 android:layout_height="@dimen/button_height"
                 android:layout_margin="@dimen/layout_margin"
                 android:layout_weight="1"
                 android:backgroundTint="@color/dark_lavender"
+                android:tag="delete"
                 android:text="@string/delete"
                 android:textColor="@color/delete_colour"
                 android:textSize="@dimen/text_size"
-                app:cornerRadius="@dimen/corner_radius"
-                android:tag="delete"/>
+                app:cornerRadius="@dimen/corner_radius" />
         </LinearLayout>
 
         <LinearLayout
