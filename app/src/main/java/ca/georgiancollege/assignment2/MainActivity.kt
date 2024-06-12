@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun handleNumberButtonClick(button: Button) {
         val currentText = binding.resultTextView.text.toString()
+        // Ensure the decimal button can only be pressed once
+        if (button.text == "." && currentText.contains(".")) {
+            return
+        }
 
         val newText = if (currentText == "0") {
             button.text.toString()  // If current text is "0", replace it with button text
