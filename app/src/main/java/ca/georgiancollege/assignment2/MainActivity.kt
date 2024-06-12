@@ -105,8 +105,16 @@ class MainActivity : AppCompatActivity() {
                 newText = currentText
             }
             "C" -> {
-                //BackSpace for the calculator.
-                newText = currentText
+                // Removes the last character from the current text
+                newText = if (currentText.isNotEmpty()) {
+                    currentText.dropLast(1)
+                } else {
+                    currentText
+                }
+                // If the result text view is empty, sets it to zero
+                if (newText.isEmpty()) {
+                    newText = "0"
+                }
             }
             else -> {
                 newText = currentText
