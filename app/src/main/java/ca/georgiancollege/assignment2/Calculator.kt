@@ -18,7 +18,7 @@ class Calculator(val binding: ActivityMainBinding) {
     private var result: String = "0"
     private var currentOperand: String = " "
     private var currentOperator: String = " "
-    private val maxInputLength = 40
+    private val maxInputLength = 22
 
     init {
 
