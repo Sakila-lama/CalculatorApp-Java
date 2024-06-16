@@ -102,16 +102,16 @@ class Calculator(val binding: ActivityMainBinding) {
 
             "%" -> {
                 val currentNumber = currentText.toDouble()
-                result = (currentNumber / 100).toString()
+                result = formatNumber(currentNumber / 100)
             }
 
             "*", "/", "-", "+", "=" -> {
                 if (currentOperator.isNotEmpty()) {
-                    result = performCalculation(
+                    result = formatNumber(performCalculation(
                         currentOperand.toDouble(),
                         currentText.toDouble(),
                         currentOperator
-                    ).toString()
+                    ))
                 }
                 currentOperator = if (operator == "=") "" else operator
                 currentOperand = result
@@ -158,6 +158,21 @@ class Calculator(val binding: ActivityMainBinding) {
             "*" -> operand1 * operand2
             "/" -> if (operand2 != 0.0) operand1 / operand2 else Double.NaN
             else -> operand2
+        }
+    }
+
+    /**
+     * Formats the number to ensure integers are displayed without decimal places and
+     * floating point numbers are accurate to at least 8 decimal places.
+     *
+     * @param number The number to be formatted.
+     * @return The formatted number as a string.
+     */
+    private fun formatNumber(number: Double): String {
+        return if (number % 1 == 0.0) {
+            number.toInt().toString()
+        } else {
+            String.format("%.8f", number).trimEnd('0').trimEnd('.')
         }
     }
 }
