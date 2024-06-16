@@ -8,6 +8,7 @@ class Calculator(val binding: ActivityMainBinding) {
     private var result: String = "0"
     private var currentOperand: String = " "
     private var currentOperator: String = " "
+    private val maxInputLength = 40
 
     init {
 
@@ -40,7 +41,7 @@ class Calculator(val binding: ActivityMainBinding) {
                 if (currentText.startsWith("-")) {
                     currentText.substring(1)  // Remove the leading "-"
                 } else {
-                    "-$currentText"  // Add a leading "-"
+                    "-$currentText"
                 }
             } else {
                 currentText
@@ -51,6 +52,10 @@ class Calculator(val binding: ActivityMainBinding) {
 
         // Ensure the decimal button can only be pressed once
         if (button.text == "." && currentText.contains(".")) {
+            return
+        }
+        // Limit input length
+        if (currentText.length >= maxInputLength) {
             return
         }
         result = if (currentText == "0") {
@@ -79,19 +84,24 @@ class Calculator(val binding: ActivityMainBinding) {
             }
 
             "*", "/", "-", "+", "=" -> {
-            if (currentOperator.isNotEmpty()) {
-                result = performCalculation(currentOperand.toDouble(), currentText.toDouble(), currentOperator).toString()
-            }
-            currentOperator = if (operator == "=") "" else operator
-            currentOperand = result
-            if (operator == "=") {
-                currentOperator = ""
-                currentOperand = ""
-             } else {
-                result = ""
-              }
+                if (currentOperator.isNotEmpty()) {
+                    result = performCalculation(
+                        currentOperand.toDouble(),
+                        currentText.toDouble(),
+                        currentOperator
+                    ).toString()
+                }
+                currentOperator = if (operator == "=") "" else operator
+                currentOperand = result
+                if (operator == "=") {
+                    currentOperator = ""
+                    currentOperand = ""
+                } else {
+                    result = ""
+                }
 
             }
+
             "C" -> {
                 result = if (currentText.isNotEmpty()) {
                     currentText.dropLast(1)
@@ -102,6 +112,7 @@ class Calculator(val binding: ActivityMainBinding) {
                     result = "0"
                 }
             }
+
             else -> {
                 result = currentText
             }
@@ -109,6 +120,7 @@ class Calculator(val binding: ActivityMainBinding) {
 
         binding.resultTextView.text = result
     }
+
     private fun performCalculation(operand1: Double, operand2: Double, operator: String): Double {
         return when (operator) {
             "+" -> operand1 + operand2
