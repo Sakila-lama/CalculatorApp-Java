@@ -111,11 +111,11 @@
                 android:layout_margin="@dimen/layout_margin"
                 android:layout_weight="1"
                 android:backgroundTint="@color/delete_colour"
+                android:tag="C"
                 android:text="@string/backspace"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
-                app:cornerRadius="@dimen/corner_radius"
-                android:tag="C"/>
+                app:cornerRadius="@dimen/corner_radius" />
         </LinearLayout>
 
         <LinearLayout

@@ -3,7 +3,17 @@ package ca.georgiancollege.assignment2;
 import android.widget.Button;
 import ca.georgiancollege.assignment2.databinding.ActivityMainBinding;
 
+
 class Calculator(val binding: ActivityMainBinding) {
+    /**
+     * Calculator.kt
+     * Author: Sakila Lama
+     * StudentID: 200548805
+     * Date: 15th, June 2024
+     * App Description: This class handles the logic for the calculator operations including
+     *  number input, operator input, and calculation execution.
+     * Version: 1.0
+     */
 
     private var result: String = "0"
     private var currentOperand: String = " "
@@ -14,9 +24,9 @@ class Calculator(val binding: ActivityMainBinding) {
 
         // Add listeners for number and decimal buttons
         val numberButtons = listOf(
-                binding.zeroButton, binding.oneButton, binding.twoButton, binding.threeButton,
-                binding.fourButton, binding.fiveButton, binding.sixButton, binding.sevenButton,
-                binding.eightButton, binding.nineButton, binding.decimalButton, binding.plusMinus
+            binding.zeroButton, binding.oneButton, binding.twoButton, binding.threeButton,
+            binding.fourButton, binding.fiveButton, binding.sixButton, binding.sevenButton,
+            binding.eightButton, binding.nineButton, binding.decimalButton, binding.plusMinus
         )
         for (button in numberButtons) {
             button.setOnClickListener { handleNumberButtonClick(button) }
@@ -24,15 +34,20 @@ class Calculator(val binding: ActivityMainBinding) {
 
         // Add listeners for operator buttons
         val operatorButtons = listOf(
-                binding.delete, binding.percentageButton, binding.multiply,
-                binding.backspace, binding.minus, binding.plus, binding.divide, binding.equalsButton
+            binding.delete, binding.percentageButton, binding.multiply,
+            binding.backspace, binding.minus, binding.plus, binding.divide, binding.equalsButton
         )
         for (button in operatorButtons) {
             button.setOnClickListener { handleOperatorButtonClick(button) }
         }
     }
 
-    private fun handleNumberButtonClick(button:Button) {
+    /**
+     * Handles number button clicks including the decimal point and the plus/minus toggle.
+     *
+     * @param button The button that was clicked.
+     */
+    private fun handleNumberButtonClick(button: Button) {
         val currentText = binding.resultTextView.text.toString()
 
         // Handle plusMinus button functionality
@@ -67,9 +82,16 @@ class Calculator(val binding: ActivityMainBinding) {
         binding.resultTextView.text = result
     }
 
+    /**
+     * Handles operator button clicks including the delete, percentage, arithmetic operators,
+     * equals, and backspace functionalities.
+     *
+     * @param button The button that was clicked.
+     */
     private fun handleOperatorButtonClick(button: Button) {
         val operator = button.tag.toString()
-        var currentText=  binding.resultTextView.text.toString()
+        var currentText = binding.resultTextView.text.toString()
+
 
         when (operator) {
             "delete" -> {
@@ -121,6 +143,14 @@ class Calculator(val binding: ActivityMainBinding) {
         binding.resultTextView.text = result
     }
 
+    /**
+     * Performs the calculation based on the given operands and operator.
+     *
+     * @param operand1 The first operand.
+     * @param operand2 The second operand.
+     * @param operator The operator to be applied.
+     * @return The result of the calculation.
+     */
     private fun performCalculation(operand1: Double, operand2: Double, operator: String): Double {
         return when (operator) {
             "+" -> operand1 + operand2

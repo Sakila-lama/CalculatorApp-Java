@@ -12,6 +12,16 @@ import ca.georgiancollege.assignment2.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+    /**
+     * MainActivity.kt
+     * Author: Sakila Lama
+     * StudentID: 200548805
+     * Date: 15th, June 2024
+     * App Description: This is a calculator app that performs basic arithmetic operations
+     * using number buttons, decimal point button, and operator buttons. The app displays the
+     * results of any calculation the user desires in a result label.
+     * Version: 1.0
+     */
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var calculator: Calculator
